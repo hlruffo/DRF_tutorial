@@ -4,8 +4,9 @@ from rest_framework.response import Response
 from snippets.models import Snippet
 from snippets.serializers import SnippetSerializer
 
+
 @api_view(['GET', 'POST'])
-def snippet_list(request):
+def snippet_list(request, format = None):
     """SNIPPET_LIST
 
     Args:
@@ -28,7 +29,7 @@ def snippet_list(request):
     
 
 @api_view(['GET', 'PUT', 'DELETE'])
-def snippet_detail(request, pk):
+def snippet_detail(request, pk, format = None):
     """snippet_detail
 
     Args:
